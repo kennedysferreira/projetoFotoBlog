@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 6.25%;
+  font-family: "Mulish", sans-serif;
+
+  --colorBaseWite: #fff;
+  --colorBaseGray100: #f5f5f5;
+  --colorBaseGray300: #8d8d99;
+  --colorBaseGray500: #3d3d3d;
+  --colorBaseGray900: #202024;
+}
+
+body {
+  font-size: 20rem;
+  background-color: var(--colorBaseWite);
+  color: var(--colorBaseGray900);
+}
+
+#app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
+
+.container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 16rem 32rem;
+}
+
+main {
+  background-color: var(--colorBaseGray100);
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+header,
+nav,
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 72rem;
+  font-weight: 700;
+}
+
+header form {
+  flex: 1;
+}
+
+header form label {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  
+}
+
+header form input {
+  border: 0;
+  background-color: var(--colorBaseGray100);
+  color: var(--colorBaseGray500);
+  padding: 12rem 16rem;
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+  font-size: 16rem;
+  font-weight: 600;
+}
+
+header form input::placeholder {
+  opacity: 0.56;
+  color: var(--colorBaseGray500);
+}
+
+nav ul {
+  list-style: none;
+  font-size: 18rem;
+  color: var(--colorBaseGray300);
+}
+
+nav ul li:hover {
+  color: var(--colorBaseGray900);
+}
+
+header img {
+  width: 42rem;
+  height: 42rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+footer {
+  text-align: center;
+  margin: auto;
+
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 20rem;
+}
