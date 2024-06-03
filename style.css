@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-  width: min(1120px, 100%);
+  width: min(1280px, 100%);
   margin: 0 auto;
   padding: 16rem 32rem;
 }
@@ -38,7 +38,8 @@ body {
 main {
   background-color: var(--colorBaseGray100);
   overflow-y: scroll;
-  overflow: hidden;
+  overflow: visible;
+  padding-bottom: 64rem;
 }
 
 header,
@@ -59,7 +60,6 @@ header form label {
   height: 1px;
   width: 1px;
   overflow: hidden;
-  
 }
 
 header form input {
@@ -68,7 +68,7 @@ header form input {
   color: var(--colorBaseGray500);
   padding: 12rem 16rem;
   width: 100%;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 16rem;
   font-weight: 600;
 }
@@ -96,10 +96,73 @@ header img {
   border-radius: 50%;
 }
 
+main .container h1 {
+  font-weight: 700;
+  font-size: 24rem;
+  line-height: 38rem;
+  margin-top: 16rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-areas: "A A A";
+  gap: 20rem;
+
+  margin-top: 32rem;
+}
+
+.item {
+  background-color: var(--colorBaseWite);
+  border-radius: 8rem;
+  overflow: hidden;
+}
+
+.item img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+
+  /* transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in; */
+
+  transition: all 300ms ease-out;
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-1deg);
+}
+
+.item h2 {
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 30rem;
+}
+
+.details {
+  padding: 22rem;
+}
+
+.tags {
+  margin-top: 1rem;
+}
+
+.tags span{
+  background-color: var(--colorBaseGray100);
+  padding: 8rem;
+  border-radius: 6rem;
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 18rem;
+}
+
+
+
+
+
 footer {
   text-align: center;
-  margin: auto;
-
+  
   font-weight: 600;
   font-size: 16rem;
   line-height: 20rem;
