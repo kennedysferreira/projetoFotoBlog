@@ -38,7 +38,6 @@ body {
 main {
   background-color: var(--colorBaseGray100);
   overflow-y: scroll;
-  overflow: visible;
   padding-bottom: 64rem;
 }
 
@@ -147,7 +146,7 @@ main .container h1 {
   margin-top: 1rem;
 }
 
-.tags span{
+.tags span {
   background-color: var(--colorBaseGray100);
   padding: 8rem;
   border-radius: 6rem;
@@ -156,14 +155,43 @@ main .container h1 {
   line-height: 18rem;
 }
 
-
-
-
-
 footer {
   text-align: center;
-  
+
   font-weight: 600;
   font-size: 16rem;
   line-height: 20rem;
+}
+
+/* animation */
+header {
+  --startY: -100%;
+  animation: move 500ms;
+}
+
+footer {
+  --startY: 100%;
+  animation: move 500ms;
+}
+
+.item {
+  --delay: 400ms;
+  animation: appear 500ms var(--delay) backwards;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
 }
